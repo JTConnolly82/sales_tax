@@ -8,7 +8,7 @@ describe "Checkout Items" do
     [1, 'music cd', 14.99], 
     [1, 'chocolate bar', 0.85]
    ]
-   input_1_line_items = [[1, 'book', 12.49], [1, 'music CD', 16.49], [1, 'chocolate bar', 0.85]]
+   input_1_line_items = [[1, 'book', 12.49], [1, 'music cd', 16.49], [1, 'chocolate bar', 0.85]]
    input_1_total_taxes = 1.50
    input_1_total_price= 29.83
 
