@@ -12,7 +12,7 @@ class Receipt
       item_description = obj[:item_desc]
       total_cost = obj[:total_item_cost]
       total_tax = obj[:total_tax]
-      @line_items.push("#{quantity}, #{item_description}, #{total_cost}")
+      @line_items.push(["#{quantity.to_i}", "#{item_description}", "#{total_cost.to_i}"])
       @combined_tax_amount += total_tax
       @total_cost_combined_after_tax += total_cost
     end

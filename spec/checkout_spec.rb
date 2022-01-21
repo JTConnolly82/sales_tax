@@ -15,7 +15,7 @@ describe "Checkout Items" do
     it 'return proper values for receipt' do
       register = Register.new
       
-      expect(register.scan_items(input_2)).to eq(
+      expect(register.scan_items(input_1)).to eq(
         line_items: input_1_line_items, 
         combined_tax_amount: input_1_total_taxes, 
         total_cost_combined_after_tax: input_1_total_price
