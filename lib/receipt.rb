@@ -10,6 +10,16 @@ class Receipt
     all_items_arr.each do |obj|
       quantity = obj[:quantity]
       item_description = obj[:item_desc]
+      # moves imported to front of description for receipt
+      if item_description.include?('imported')
+        description_arr = item_description.split(" ")
+        imported_index = description_arr.find_index("imported")
+        if imported_index != 0
+          description_arr.delete_at(imported_index)
+          description_arr.unshift("imported")
+          item_description = description_arr.join(" ")
+        end
+      end
       total_cost = obj[:total_item_cost]
       total_tax = obj[:total_tax]
       @line_items.push([quantity, item_description, total_cost])
