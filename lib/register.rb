@@ -45,7 +45,7 @@ class Register
 
   def calc_after_tax_total
     after_tax_total = @price_before_tax + @total_tax_amount
-    return after_tax_total
+    return after_tax_total.round(2)
   end
 
   def print_receipt

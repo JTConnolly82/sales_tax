@@ -12,9 +12,6 @@ class Item
     else
       return "other"
     end
-    # if input includes chocolate, label as a food (which will be exempt)
-    # if includes pills, label as medicine (which will be exempt)
-    # if includes book, label as book (which will be exempt)
   end
 
   def is_imported?(raw_text)
