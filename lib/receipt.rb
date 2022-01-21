@@ -29,7 +29,9 @@ class Receipt
   def print_receipt
     puts ""
     puts "------------"
-    puts @line_items
+    @line_items.each do |item|
+      puts "#{item[0]}, #{item[1]}, #{item[2]}"
+    end
     puts ""
     puts "Sales Taxes: #{@combined_tax_amount}"
     puts "Total: #{@total_cost_combined_after_tax}"
